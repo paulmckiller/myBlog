@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Dropdown } from 'react-bootstrap'
 import axios from 'axios';
 import Content from '../components/Content';
 
 const HomeScreen = () => {
-    const [blogs, setBlogs] = useState([
-    ]);
+    const [blogs, setBlogs] = useState([]);
+    
+   
 
     useEffect(() => {
         //axios.get('/blogs').then(({data}) => setBlogs(data)).catch((err)=>console.log(err));
@@ -23,8 +24,9 @@ const HomeScreen = () => {
             </Row>
             <Row>
                 {blogs && blogs.map(blog => (
-                    <Col className="py-3" key={blog.id} sm={12} md={6} lg={4} xl={4}>
+                    <Col className="py-3" key={blog._id} sm={12} md={6} lg={4} xl={4}>
                         <Content blog={blog} />
+                        
                     </Col>
                 ))}
             </Row>

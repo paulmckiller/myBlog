@@ -15,10 +15,10 @@ const ContentScreen = () => {
             .catch(err => console.log(err));
         //axios.get(`/blogs/${id}`).then(({data}) => setBlog(data)).catch(err => console.log(err))
         console.log(blog);
-    }, [blog])
+    }, [])
 
     return (
-        <Jumbotron className="py-3" key={blog.id}>
+        <Jumbotron className="py-3" key={blog._id}>
             <Nav className="justify-content-end py-0"><Nav.Item><Button variant="primary">Edit</Button></Nav.Item></Nav>
             <h1 className="pt-0">{blog.title}</h1>
             <p className="text-left">{blog.content}</p>
