@@ -14,13 +14,16 @@ const Header = () => {
                         <LinkContainer to="/profile">
                             <Nav.Link className="mr-2"><i className="far fa-user-circle"></i> Profile</Nav.Link>
                         </LinkContainer>
-                        <LinkContainer to="/content">
+                        <LinkContainer to="/mycontent">
                             <Nav.Link className="mr-2"><i className="fab fa-blogger"></i> My Content</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/newblog">
+                            <Nav.Link className="mr-2"><i className="far fa-plus-square"></i> Add New Blog</Nav.Link>
                         </LinkContainer>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder=". . ." className="mr-sm-md-2" />
-                        <Button variant="outline-success"><i className="fas fa-search"></i> Search</Button>
+                        <Button variant="outline-success"><i className="far fa-plus-square"></i> Search</Button>
                     </Form>
                 </Navbar.Collapse>
             </Navbar>
